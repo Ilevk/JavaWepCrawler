@@ -15,27 +15,27 @@ public class Paser {
         switch (domainName) {
             case "Naver":
                 address = "http://news.naver.com/";
-                filename = "Naver";
+                filename = "DB/Naver/Naver";
                 break;
             case "Chosun":
                 address = "http://www.chosun.com";
-                filename = "Chosun";
+                filename = "DB/Chosun/Chosun";
                 break;
             case "Donga":
                 address = "http://www.donga.com";
-                filename = "Donga";
+                filename = "DB/Donga/Donga";
                 break;
             case "Joongang":
                 address = "http://joongang.joins.com";
-                filename = "Joongang";
+                filename = "DB/Joongang/Joongang";
                 break;
             case "Mail":
                 address = "http://www.mk.co.kr";
-                filename = "Mail";
+                filename = "DB/Mail/Mail";
                 break;
             case "NewYorkTimes":
                 address = "https://www.nytimes.com";
-                filename = "Newyork";
+                filename = "DB/Newyork/Newyork";
                 break;
         }
         Crawler crawler = new Crawler(address, filename);
