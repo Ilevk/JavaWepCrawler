@@ -32,7 +32,7 @@ public class Crawler {
             con = (HttpURLConnection) Url.openConnection();
             con.setRequestMethod(protocol);
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
-            br = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF-8"));
+            br = new BufferedReader(new InputStreamReader(con.getInputStream(), "Euc-kr"));
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -45,7 +45,7 @@ public class Crawler {
             io.openWrite();
             while ((temp = br.readLine()) != null) {
                 io.write(temp);
-//                System.out.println(temp);
+                System.out.println(temp);
             }
             io.closeWrite();
             br.close();

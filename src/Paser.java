@@ -14,7 +14,7 @@ public class Paser {
     private void init(String domainName) {
         switch (domainName) {
             case "Naver":
-                address = "https://www.naver.com";
+                address = "http://news.naver.com/";
                 filename = "Naver";
                 break;
             case "Chosun":

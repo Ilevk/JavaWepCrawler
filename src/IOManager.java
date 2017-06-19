@@ -5,8 +5,8 @@ import java.io.*;
  * My Class
  */
 public class IOManager {
-    private FileWriter fw;
-    private FileReader fr;
+    private OutputStream fw;
+    private InputStream fr;
     private StringBuilder sb;
     private String filename;
 
@@ -16,11 +16,11 @@ public class IOManager {
     }
 
     void openWrite() throws IOException {
-        fw = new FileWriter(filename);
+        fw = new FileOutputStream(filename);
     }
 
     void write(String str) throws IOException {
-        fw.write(str);
+        fw.write(str.getBytes());
     }
 
     void closeWrite() throws IOException {
@@ -28,7 +28,7 @@ public class IOManager {
     }
 
     void openRead() throws IOException {
-        fr = new FileReader(filename);
+        fr = new FileInputStream(filename);
     }
 
     String read() throws IOException {
