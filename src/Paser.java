@@ -40,6 +40,7 @@ public class Paser {
         }
         Crawler crawler = new Crawler(address, filename);
         crawler.start();
+        crawler.extractChosun();
     }
 }
 

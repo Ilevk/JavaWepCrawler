@@ -23,6 +23,7 @@ public class Crawler {
         this.filename = filename;
 //        io = new IOManager(filename);
         io = new IOManager();
+        io.init(filename);
         try {
             init(Address);
         } catch (IOException e) {
@@ -48,7 +49,7 @@ public class Crawler {
             String input = "";
             io.openWrite();
             while ((temp = br.readLine()) != null) {
-                io.write(temp);
+                io.write(temp+"\n");
                 System.out.println(temp);
             }
             io.closeWrite();
@@ -58,9 +59,16 @@ public class Crawler {
         }
     }
 
-    public void extractChosun(){
+    public void extractChosun() {
         io.init(filename);
-        String article;
+        try {
+            io.openRead();
+            String article = io.read();
+            System.out.println(article);
+            io.closeRead();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
