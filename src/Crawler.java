@@ -49,7 +49,7 @@ public class Crawler {
             String input = "";
             io.openWrite();
             while ((temp = br.readLine()) != null) {
-                io.write(temp+"\n");
+                io.write(temp + "\n");
 //                System.out.println(temp);
             }
             io.closeWrite();
@@ -60,15 +60,23 @@ public class Crawler {
     }
 
     public void extractChosun() {
-        io.init(filename);
         try {
+            String article[];
+            String articles;
+            io.init(filename);
             io.openRead();
-            String article = io.read();
-            System.out.println(article);
+            articles = io.read();
+//            System.out.println(article);
             io.closeRead();
+            article = articles.split("<div id=\"top_news\">");
+            article = article[1].split("<!-- top_news -->");
+            System.out.println(article[0]);
+            io.init("DB/Chosun/articles");
+            io.openWrite();
+            io.write("<div id=\"top_news\">\n"+article[0]);
+            io.closeWrite();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
