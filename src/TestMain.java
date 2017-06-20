@@ -3,7 +3,6 @@
  */
 public class TestMain {
     public static void main(String[] args){
-      Paser paser = new Paser("Naver");
-
+      Paser paser = new Paser("Chosun");
     }
 }

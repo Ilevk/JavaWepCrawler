@@ -26,6 +26,7 @@ public class Crawler {
             e.printStackTrace();
         }
     }
+
     private void init(String Address) throws IOException {
         try {
             Url = new URL(Address);
@@ -52,5 +53,11 @@ public class Crawler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void extractChosun(){
+        StringBuilder sb = new StringBuilder();
+        String article;
+        
     }
 }
