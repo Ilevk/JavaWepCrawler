@@ -40,7 +40,7 @@ public class IOManager {
         String temp;
         String i;
         while ((i = fr.readLine()) != null) {
-            sb.append(i);
+            sb.append(i+"\n");
         }
         temp = sb.toString();
         sb.delete(0, sb.length());

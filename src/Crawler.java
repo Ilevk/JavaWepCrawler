@@ -50,7 +50,7 @@ public class Crawler {
             io.openWrite();
             while ((temp = br.readLine()) != null) {
                 io.write(temp+"\n");
-                System.out.println(temp);
+//                System.out.println(temp);
             }
             io.closeWrite();
             br.close();

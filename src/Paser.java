@@ -39,7 +39,7 @@ public class Paser {
                 break;
         }
         Crawler crawler = new Crawler(address, filename);
-        crawler.start();
+//        crawler.start();
         crawler.extractChosun();
     }
 }
