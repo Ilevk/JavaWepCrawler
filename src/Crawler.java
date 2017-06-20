@@ -11,6 +11,7 @@ import java.net.URL;
  */
 public class Crawler {
     private static String Address;
+    private static String filename;
     private static URL Url;
     private static BufferedReader br;
     private static HttpURLConnection con;
@@ -19,6 +20,7 @@ public class Crawler {
 
     Crawler(String Address, String filename) {
         this.Address = Address;
+        this.filename = filename;
 //        io = new IOManager(filename);
         io = new IOManager();
         try {
@@ -57,7 +59,7 @@ public class Crawler {
     }
 
     public void extractChosun(){
-        StringBuilder sb = new StringBuilder();
+        io.init(filename);
         String article;
 
     }

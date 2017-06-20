@@ -16,7 +16,7 @@ public class IOManager {
 //    }
 
     void init(String filename){
-        this.filename = filename;
+        this.filename = filename + ".txt";
         sb = new StringBuilder();
     }
 
