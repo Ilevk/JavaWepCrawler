@@ -59,7 +59,7 @@ public class Crawler {
         }
     }
 
-    public void extractChosun() {
+    public void extractChosunTopnews() {
         try {
             String article[];
             String articles;
