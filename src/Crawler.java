@@ -19,7 +19,8 @@ public class Crawler {
 
     Crawler(String Address, String filename) {
         this.Address = Address;
-        io = new IOManager(filename);
+//        io = new IOManager(filename);
+        io = new IOManager();
         try {
             init(Address);
         } catch (IOException e) {
@@ -58,6 +59,6 @@ public class Crawler {
     public void extractChosun(){
         StringBuilder sb = new StringBuilder();
         String article;
-        
+
     }
 }

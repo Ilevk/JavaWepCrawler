@@ -10,8 +10,13 @@ public class IOManager {
     private StringBuilder sb;
     private String filename;
 
-    IOManager(String filename) {
-        this.filename = filename + ".txt";
+//    IOManager(String filename) {
+//        this.filename = filename + ".txt";
+//        sb = new StringBuilder();
+//    }
+
+    void init(String filename){
+        this.filename = filename;
         sb = new StringBuilder();
     }
 
